@@ -1,0 +1,68 @@
+<!-- <> [] -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BANCO DE ESPECIAS</title>
+    <link rel="stylesheet" href="./css/styles.css"/>
+  </head>
+  <body>
+    <header class="header">
+      <h1>BANCO DE ESPECIAS</h1>
+    </header>
+    <main>
+      <div>
+        <div>
+          <h2>POR FAVOR INTRODUZCA SUS DATOS</h2>
+        </div>
+        <div>
+          <form>
+            <fieldset>
+              <div>
+              <label for="nombre"
+                >Ingrese su nombre
+                <input id="nombre" name="nombre" type="text" placeholder="Nombre" required
+              /></label>
+              <label for="apellido"
+                >Ingrese su apellido<input
+                  id="apellido"
+                  name="apellido"
+                  type="text"
+                  placeholder="Apellido"
+                  required
+              /></label>
+              <label for="correo"
+                >Ingrese su correo electronico<input
+                  id="correo"
+                  name="correo"
+                  type="email"
+                  placeholder="Correo"
+                  required
+              /></label>
+              <label for="contrasenha"
+                >Ingrese su contraseña<input
+                  id="contrasenha"
+                  name="contrasenha"
+                  type="password"
+                  placeholder="Contraseña"
+                  required
+              /></label>
+              </div>
+              <div class="caja-visible">
+                <input type="checkbox" id="visible"/>
+                <label id="visible">Mostrar contraseña</label>
+              </div>
+            </fieldset>
+            <div>
+              <a href="./pages/lobbyDeEspecias.html" target="_blank"
+                ><button type="submit" id="submit">Enviar</button></a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="./index.js"></script>
+  </body>
+</html>
