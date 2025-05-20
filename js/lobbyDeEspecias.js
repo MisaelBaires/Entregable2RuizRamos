@@ -11,25 +11,22 @@ window.addEventListener("scroll", function () {
 
 //BOCETO PARA AGREGAR FUNCIÓN A LOS BOTONES
 
-/*document.querySelectorAll('.productos').forEach(producto => {
-  const cantidadEl = producto.querySelector('.cantidad');
-  const btnAgregar = producto.querySelectorAll('button')[0];
-  const btnDisminuir = producto.querySelectorAll('button')[1];
+/*contenedor.addEventListener("click", (e) => {
+  if (e.target.classList.contains("btn-agregar") || e.target.classList.contains("btn-disminuir")) {
+    const index = e.target.dataset.index;
+    const producto = productosData[index];
+    const cantidadEl = e.target.parentElement.querySelector(".cantidad");
 
-  btnAgregar.addEventListener('click', () => {
-    let cantidad = parseInt(cantidadEl.textContent);
-    cantidad++;
-    cantidadEl.textContent = cantidad;
-  });
-
-  btnDisminuir.addEventListener('click', () => {
-    let cantidad = parseInt(cantidadEl.textContent);
-    if (cantidad > 0) {
-      cantidad--;
-      cantidadEl.textContent = cantidad;
+    if (e.target.classList.contains("btn-agregar")) {
+      producto.cantidad++;
+    } else if (e.target.classList.contains("btn-disminuir") && producto.cantidad > 0) {
+      producto.cantidad--;
     }
-  });
-});*/
+
+    cantidadEl.textContent = producto.cantidad;
+  }
+});
+*/
 
 // Prueba del JSON
 
@@ -77,18 +74,22 @@ contenedor.addEventListener("click", (e) => {
   }
 });
 
-contenedor.addEventListener("click", (e) => {
-  if (e.target.classList.contains("btn-agregar") || e.target.classList.contains("btn-disminuir")) {
-    const index = e.target.dataset.index;
-    const producto = productosData[index];
-    const cantidadEl = e.target.parentElement.querySelector(".cantidad");
+document.querySelectorAll('.productos').forEach(producto => {
+  const cantidadEl = producto.querySelector('.cantidad');
+  const btnAgregar = producto.querySelectorAll('button')[0];
+  const btnDisminuir = producto.querySelectorAll('button')[1];
 
-    if (e.target.classList.contains("btn-agregar")) {
-      producto.cantidad++;
-    } else if (e.target.classList.contains("btn-disminuir") && producto.cantidad > 0) {
-      producto.cantidad--;
+  btnAgregar.addEventListener('click', () => {
+    let cantidad = parseInt(cantidadEl.textContent);
+    cantidad++;
+    cantidadEl.textContent = cantidad;
+  });
+
+  btnDisminuir.addEventListener('click', () => {
+    let cantidad = parseInt(cantidadEl.textContent);
+    if (cantidad > 0) {
+      cantidad--;
+      cantidadEl.textContent = cantidad;
     }
-
-    cantidadEl.textContent = producto.cantidad;
-  }
+  });
 });
